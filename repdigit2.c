@@ -1,5 +1,5 @@
 /*Checks numbers for repeated digits.*/
-/*Prints which digits repeat.
+/*Prints a table of the number and how many times it appears.*/
 /* Chapter 8, exercise 2.*/
 
 #include <stdio.h>
@@ -23,10 +23,9 @@ int main()
 	}
 
 	if(x == 1){
-		printf("Repeated digits: ");		
-		for(i=0; i<N; i++){
-			if(digit_seen[i] > 1) printf(" %d", i);
-		}
+		for(i=0; i<10; i++) printf("%3d", i);
+		printf("\n");
+		for(i=0; i<10; i++) printf("%3d", digit_seen[i]);
 		printf("\n\n");
 	}
 	else printf("No repeated digits.\n");
